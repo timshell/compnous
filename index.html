@@ -55,6 +55,37 @@ function typeWriter() {
 </script> -->
 </div>
 
+<div id="soon">
+coming soon...
+</div>
+
+<script>
+
+// function soon() {
+//   document.getElementById('soon').style.opacity = 0;
+// }
+
+// setTimeout(soon, 1000)
+
+function fade(element) {
+    var op = .01;  // initial opacity
+    element.style.opacity = op;
+    var timer = setInterval(function () {
+        if (op >= 0.7){
+            clearInterval(timer);
+            // element.style.opacity = op;        
+          }
+        element.style.opacity = op;
+        element.style.filter = 'alpha(opacity=' + op * 100 + ")";
+        op += op * 0.1;
+    }, 100);
+}
+  
+fade(document.getElementById('soon'))
+
+</script>
+
+
 
 
 
